@@ -35,7 +35,7 @@
             class="max-w-full"
           />
           <p
-            class="rate absolute py-1 px-2 rounded-r-lg bg-amber-500 text-slate-50"
+            class="rate absolute py-1 px-2 rounded-br-lg bg-amber-500 text-slate-50"
           >
             {{ movie.vote_average }}
           </p>
@@ -152,7 +152,6 @@ const searchMovies = async () => {
     console.error("Error fetching movies:", error);
   }
 };
-
 onMounted(() => {
   getMovies();
 });
