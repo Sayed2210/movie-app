@@ -13,7 +13,7 @@ const route = useRoute();
 const getMovie = async () => {
   try {
     const response = await axios.get(
-      `https://api.themoviedb.org/3/movie/${route.params.id}?api_key=43081324ff051cb33a93cc2f0ff430c7&language=en-US`
+      `https://api.themoviedb.org/3/movie/${route.params._movieid}?api_key=43081324ff051cb33a93cc2f0ff430c7&language=en-US`
     );
     movie.value = response.data;
     console.log(movie.value);
@@ -23,7 +23,7 @@ const getMovie = async () => {
 };
 
 onMounted(() => {
-  console.log("Route Parameter ID:", route.params.id);
-  // getMovie();
+  console.log("Route Parameter ID:", route.params._movieid);
+  getMovie();
 });
 </script>
