@@ -3,4 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxtjs/tailwindcss"],
   css: ["~/assets/scss/main.scss"],
+  app: {
+    pageTransition: { name: "page", mode: "out-in" },
+  },
 });

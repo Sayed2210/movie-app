@@ -26,7 +26,7 @@
       <div
         v-for="(movie, index) in searchedMovies"
         :key="index"
-        class="mb-2 movie"
+        class="mb-2 movie bg-white px-2 border border-amber-500"
       >
         <div class="movie-img relative overflow-hidden">
           <img
@@ -53,7 +53,7 @@
           <p class="mb-2 mt-2">
             Released :
             {{
-              new Date(movie.release_date).toLocaleString("en-is", {
+              new Date(movie.release_date).toLocaleString("en-us", {
                 month: "long",
                 day: "numeric",
                 year: "numeric",
